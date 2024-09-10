@@ -20,7 +20,8 @@ export default {
         '/src/assets/images/venue/venue1.jpg',
         '/src/assets/images/venue/venue2.jpg',
         '/src/assets/images/venue/venue3.jpg',
-        // Add more image paths as needed
+        '/src/assets/images/venue/venue4.jpg',
+        '/src/assets/images/venue/venue7.jpg',
       ],
     };
   },
@@ -36,14 +37,14 @@ export default {
 };
 </script>
 
-<style>
+<style> 
 .modal {
   display: block;
   position: fixed;
   z-index: 1;
-  left: 0;
-  top: 0;
-  width: 100%;
+  left: 5%;
+  top: 10px;
+  width: 90%;
   height: 100%;
   overflow: auto;
   background-color: rgb(0,0,0);
@@ -51,9 +52,12 @@ export default {
 }
 
 .modal-content {
-  margin: 15% auto;
   padding: 20px;
   width: 80%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 10px;
+  margin: auto;
 }
 
 .close {
