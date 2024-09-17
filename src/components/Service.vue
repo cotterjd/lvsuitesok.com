@@ -1,22 +1,49 @@
 <template>
   <div>
     <h2>{{title}}</h2>
-    <p class="w-96 h-64 grid items-center">{{ blurb }}</p>
     <div class="service-image-container">
-      <img :src="images[0]" alt="Venue Image" width="400px" />
+      <img v-if="images.length" :src="images[0].src" alt="Venue Image" width="400px" />
     </div>
     <button class="button" @click="openGallery">Gallery</button>
+    <p class="w-96 h-64 grid">{{ blurb }}</p>
 
     <div v-show="isOpen" class="modal" @click="closeGallery">
       <span class="close" @click="closeGallery">×</span>
       <div class="modal-content gallery">
-        <img v-for="src in images" :key="src" :src="src" alt="Gallery Image" />
+        <img v-for="src in images" :key="src.src" :src="src.src" alt="Gallery Image" />
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import img_cropped from '../assets/venue_cropped.jpg';
+import img1 from '../assets/venue/venue1.jpg';
+import img2 from '../assets/venue/venue2.jpg';
+import img3 from '../assets/venue/venue3.jpg';
+import img4 from '../assets/venue/venue4.jpg';
+import img7 from '../assets/venue/venue7.jpg';
+import house_cropped from '../assets/house_cropped.jpg';
+import house1 from '../assets/house/house1.jpg';
+import house2 from '../assets/house/house2.jpg';
+import house3 from '../assets/house/house3.jpg';
+import house4 from '../assets/house/house4.jpg';
+import house5 from '../assets/house/house5.jpg';
+import room_cropped from '../assets/room_cropped.jpg';
+import room1 from '../assets/house/house14.jpg';
+import room2 from '../assets/house/house19.jpg';
+import room3 from '../assets/house/house25.jpg';
+import room4 from '../assets/house/house26.jpg';
+import room5 from '../assets/house/house27.jpg';
+import room6 from '../assets/house/house28.jpg';
+import room7 from '../assets/house/house29.jpg';
+import room8 from '../assets/house/house30.jpg';
+import room9 from '../assets/house/house31.jpg';
+import room10 from '../assets/house/house33.jpg';
+import room11 from '../assets/house/house34.jpg';
+import room12 from '../assets/house/house38.jpg';
+import room13 from '../assets/house/house39.jpg';
+
 export default {
   data() {
     return {
@@ -37,38 +64,39 @@ export default {
   mounted() {
     if (this.title === `Venue`) {
       this.images = [
-        '/src/assets/images/venue_cropped.jpg',
-        '/src/assets/images/venue/venue1.jpg',
-        '/src/assets/images/venue/venue2.jpg',
-        '/src/assets/images/venue/venue3.jpg',
-        '/src/assets/images/venue/venue4.jpg',
-        '/src/assets/images/venue/venue7.jpg',
+        img_cropped,
+        img1,
+        img2,
+        img3,
+        img4,
+        img7,
       ]
-    } else if (this.title === `House`) {
+    } 
+    else if (this.title === `House`) {
       this.images = [
-        '/src/assets/images/house_cropped.jpg',
-        '/src/assets/images/house/house1.jpg',
-        '/src/assets/images/house/house2.jpg',
-        '/src/assets/images/house/house3.jpg',
-        '/src/assets/images/house/house4.jpg',
-        '/src/assets/images/house/house5.jpg',
+        house_cropped,
+        house1,
+        house2,
+        house3,
+        house4,
+        house5,
       ]
     } else if (this.title === `Room`) {
       this.images = [
-        '/src/assets/images/room_cropped.jpg',
-        '/src/assets/images/house/house14.jpg',
-        '/src/assets/images/house/house19.jpg',
-        '/src/assets/images/house/house25.jpg',
-        '/src/assets/images/house/house26.jpg',
-        '/src/assets/images/house/house27.jpg',
-        '/src/assets/images/house/house28.jpg',
-        '/src/assets/images/house/house29.jpg',
-        '/src/assets/images/house/house30.jpg',
-        '/src/assets/images/house/house31.jpg',
-        '/src/assets/images/house/house33.jpg',
-        '/src/assets/images/house/house34.jpg',
-        '/src/assets/images/house/house38.jpg',
-        '/src/assets/images/house/house39.jpg',
+        room_cropped,
+        room1,
+        room2,
+        room3,
+        room4,
+        room5,
+        room6,
+        room7,
+        room8,
+        room9,
+        room10,
+        room11,
+        room12,
+        room13,
       ]
     }
   }
@@ -135,6 +163,4 @@ h2 {
   height: auto;
 }
 
-.service-image-container {
-}
 </style>

@@ -1,14 +1,14 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
 import Banner from '../components/Banner.astro';
 import Service from '../components/Service.vue';
+import Header from "../components/Header.astro";
 import CTA from "../components/CallToAction.astro";
 ---
 
 <Layout title="Welcome to Astro.">
 	<main>
-		<CTA />
+		<Header />
 		<Banner />
 		<div class="">
 			<div class="services-container justify-items-center">
@@ -26,6 +26,7 @@ import CTA from "../components/CallToAction.astro";
 				/>
 			</div>
 		</div>
+		<CTA />
 	</main>
 </Layout>
 
