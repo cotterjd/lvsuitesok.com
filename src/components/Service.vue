@@ -30,19 +30,19 @@ import house3 from '../assets/house/house3.jpg';
 import house4 from '../assets/house/house4.jpg';
 import house5 from '../assets/house/house5.jpg';
 import room_cropped from '../assets/room_cropped.jpg';
-import room1 from '../assets/house/house14.jpg';
-import room2 from '../assets/house/house19.jpg';
-import room3 from '../assets/house/house25.jpg';
-import room4 from '../assets/house/house26.jpg';
-import room5 from '../assets/house/house27.jpg';
-import room6 from '../assets/house/house28.jpg';
-import room7 from '../assets/house/house29.jpg';
-import room8 from '../assets/house/house30.jpg';
-import room9 from '../assets/house/house31.jpg';
-import room10 from '../assets/house/house33.jpg';
-import room11 from '../assets/house/house34.jpg';
-import room12 from '../assets/house/house38.jpg';
-import room13 from '../assets/house/house39.jpg';
+import house14 from '../assets/house/house14.jpg';
+import house19 from '../assets/house/house19.jpg';
+import house25 from '../assets/house/house25.jpg';
+import house26 from '../assets/house/house26.jpg';
+import house27 from '../assets/house/house27.jpg';
+import house28 from '../assets/house/house28.jpg';
+import house29 from '../assets/house/house29.jpg';
+import house30 from '../assets/house/house30.jpg';
+import house31 from '../assets/house/house31.jpg';
+import house33 from '../assets/house/house33.jpg';
+import house34 from '../assets/house/house34.jpg';
+import house38 from '../assets/house/house38.jpg';
+import house39 from '../assets/house/house39.jpg';
 
 export default {
   data() {
@@ -84,19 +84,19 @@ export default {
     } else if (this.title === `Room`) {
       this.images = [
         room_cropped,
-        room1,
-        room2,
-        room3,
-        room4,
-        room5,
-        room6,
-        room7,
-        room8,
-        room9,
-        room10,
-        room11,
-        room12,
-        room13,
+        house14,
+        house19,
+        house25,
+        house26,
+        house27,
+        house28,
+        house29,
+        house30,
+        house31,
+        house33,
+        house34,
+        house38,
+        house39,
       ]
     }
   }
