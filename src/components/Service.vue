@@ -2,7 +2,7 @@
   <div>
     <h2>{{title}}</h2>
     <div class="service-image-container">
-      <img v-if="images.length" :src="images[0].src" alt="Venue Image" width="400px" />
+      <img v-if="images.length" :src="images[0].src" :srcset="srcSet" alt="Venue Image" width="400px" />
     </div>
     <button class="button" @click="openGallery">Gallery</button>
     <p class="w-96 h-64 grid">{{ blurb }}</p>
@@ -17,7 +17,13 @@
 </template>
 
 <script>
-import img_cropped from '../assets/venue_cropped.jpg';
+// import img_cropped from '../assets/venue_cropped.jpg';
+import img_cropped_300 from '../assets/venue_cropped_300.jpg';
+import img_cropped_400 from '../assets/venue_cropped_400.jpg';
+import img_cropped_600 from '../assets/venue_cropped_600.jpg';
+import img_cropped_700 from '../assets/venue_cropped_700.jpg';
+import img_cropped_800 from '../assets/venue_cropped_800.jpg';
+
 import img1 from '../assets/venue/venue1.jpg';
 import img2 from '../assets/venue/venue2.jpg';
 import img3 from '../assets/venue/venue3.jpg';
@@ -49,6 +55,7 @@ export default {
     return {
       isOpen: false,
       images: [],
+      srcSet: ``, 
     };
   },
   props: [`title`, `blurb`],
@@ -64,13 +71,14 @@ export default {
   mounted() {
     if (this.title === `Venue`) {
       this.images = [
-        img_cropped,
+        img_cropped_300,
         img1,
         img2,
         img3,
         img4,
         img7,
       ]
+      this.srcSet = `${img_cropped_400.src} 400w, ${img_cropped_300.src} 800w, ${img_cropped_400.src} 1200w, ${img_cropped_600.src} 1600w, ${img_cropped_700.src} 2000w, ${img_cropped_800.src} 2400w` 
     } 
     else if (this.title === `House`) {
       this.images = [
