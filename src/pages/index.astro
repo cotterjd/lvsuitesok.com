@@ -4,6 +4,11 @@ import Banner from '../components/Banner.astro';
 import Service from '../components/Service.vue';
 import Header from "../components/Header.astro";
 import CTA from "../components/CallToAction.astro";
+
+import { Image } from 'astro:assets';
+import CroppedVenue from '../assets/venue_cropped_400.jpg';
+import CroppedHouse from '../assets/house_cropped_400.jpg';
+import CroppedRoom from '../assets/room_cropped_400.jpg';
 ---
 
 <Layout title="Welcome to Astro.">
@@ -15,15 +20,30 @@ import CTA from "../components/CallToAction.astro";
 				<Service client:load
 					title="Venue"
 					blurb="This venue seats 120 people. Perfect for Weddings. Includes bride and groom rooms and accommodations for the family."
-				/>
+				>
+					<Image
+						src={CroppedVenue}
+						alt="venue image"
+					/>
+				</Service>
 				<Service client:load
 					title="House"
 					blurb="This 8-bed/6.5 bath, 5,000 sqft house is perfect for a Framily get-togethers or family reunions. Both stories include kitchen and can be completely separate with their own entrances to the outside. House includes pool table and ping-pong table. Bedrooms have direct porch/balcony access."
-				/>
+				>
+					<Image
+						src={CroppedHouse}
+						alt="house image"
+					/>
+				</Service>
 				<Service client:load
 					title="Room"
 					blurb="Book just a single bedroom. All amenities, including lakefront, are still included."
-				/>
+				>
+					<Image
+						src={CroppedHouse}
+						alt="house image"
+					/>
+				</Service>
 			</div>
 		</div>
 		<CTA />
