@@ -1,8 +1,7 @@
 <template>
-  <div>
+  <div class="p-5">
     <h2>{{title}}</h2>
     <div class="service-image-container">
-      <!--TODO: make this static pass in Astro image into slot-->
       <slot></slot>
       <!--<img v-if="images.length" :src="images[0].src" :srcset="srcSet" alt="Venue Image" width="400px" />-->
     </div>
